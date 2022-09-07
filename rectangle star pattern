@@ -1,0 +1,24 @@
+import java.util.*;
+public class rectanglestar {
+    public static void main(String[] args) {
+        int rows, columns;
+        char ch;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter no of rows:");
+        rows = sc.nextInt();
+        System.out.println("enter no of columns:");
+        columns = sc.nextInt();
+        System.out.println("enter any character:");
+        ch = sc.next().charAt(0);
+        if (rows != columns) {
+            for (int i = 0; i < rows; i++) {
+                for (int j = 0; j < columns; j++) {
+                    System.out.print(ch);
+                }
+                System.out.print("\n");
+            }
+        } else {
+            System.out.println("it is a square.");
+        }
+    }
+}
