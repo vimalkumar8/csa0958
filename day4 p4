@@ -1,0 +1,41 @@
+import java.util.*;
+public class consandvow {
+    public static void main(String[] args){
+        try{
+            String s1;
+            Scanner sc=new Scanner(System.in);
+            System.out.println("enter the string:");
+            s1=sc.next();
+            char a[]=s1.toCharArray();
+            char v[]={'a','e','i','o','u','A','E','I','O','U'};
+            char c[]={'b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z'};
+            System.out.println("the vowels are:");
+            for(int i=0;i<a.length;i++)
+            {
+                for(int j=0;j<v.length;j++)
+                {
+                    if(v[j]==a[i])
+                    {
+                       System.out.print(a[i]);
+                    }
+                }
+            }
+            System.out.println();
+            System.out.println("the consonants are:");
+            for(int i=0;i<a.length;i++)
+            {
+                for(int j=0;j<c.length;j++)
+                {
+                    if(c[j]==a[i])
+                    {
+                        System.out.print(a[i]);
+                    }
+                }
+            }
+        }
+        catch(Exception e)
+        {
+            System.out.println("invalid input value provided.");
+        }
+    }
+}
