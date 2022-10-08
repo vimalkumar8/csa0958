@@ -1,0 +1,27 @@
+import java.util.*;
+public class squareroot {
+    public static void main(String[] args){
+        try{
+            int n;
+            double k;
+            Scanner sc=new Scanner(System.in);
+            System.out.println("enter the number:");
+            n=sc.nextInt();
+            if(n<=0)
+            {
+                throw new ArithmeticException("invalid due to negative or zero values.");
+            }
+            k=Math.sqrt(n);
+            System.out.println("square root: ");
+            System.out.println(k+" "+ -k);
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println("invalid due to negative or zero values.");
+        }
+        catch(Exception e)
+        {
+            System.out.println("invalid input provided.");
+        }
+    }
+}
