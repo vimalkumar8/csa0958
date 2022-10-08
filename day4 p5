@@ -1,0 +1,30 @@
+import java.util.*;
+public class fibonacci {
+    public static void main(String[] args){
+        try{
+            int n,a=0,b=1,c,i;
+            Scanner sc=new Scanner(System.in);
+            System.out.println("enter n value:");
+            n=sc.nextInt();
+            if(n<0)
+            {
+            throw new ArithmeticException("invalid due to negative value");
+            }
+            for(i=0;i<n;i++)
+            {
+                System.out.print(a+" ");
+                c=a+b;
+                a=b;
+                b=c;
+            }
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println("invalid due to negative value.");
+        }
+        catch(Exception e)
+        {
+            System.out.println("invalid input provided.");
+        }
+    }
+}
