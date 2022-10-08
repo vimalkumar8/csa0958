@@ -1,0 +1,37 @@
+import java.util.*;
+public class perfectno {
+    public static void main(String[] args){
+        try{
+            int n,sum=0;
+            Scanner sc=new Scanner(System.in);
+            System.out.println("enter any number:");
+            n=sc.nextInt();
+            if(n<0)
+            {
+                throw new ArithmeticException("invalid due to negative no.");
+            }
+            for(int i=1;i<n;i++)
+            {
+                if(n%i==0)
+                {
+                    sum=sum+i;
+                }
+            }
+            if(sum==n)
+            {
+                System.out.println("It's a perfect no.");
+            }
+            else {
+                System.out.println("It's not a perfect no.");
+            }
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println("invalid due to negative no.");
+        }
+        catch(Exception e)
+        {
+            System.out.println("invalid due to float no.");
+        }
+    }
+}
