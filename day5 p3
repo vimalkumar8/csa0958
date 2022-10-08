@@ -1,0 +1,28 @@
+import java.util.*;
+public class sumofN {
+    public static void main(String[] args){
+        try{
+            int n,sum=0;
+            Scanner sc=new Scanner(System.in);
+            System.out.println("enter n value:");
+            n=sc.nextInt();
+            if(n<0)
+            {
+                throw new ArrayIndexOutOfBoundsException("invalid array index declared");
+            }
+            for(int i=1;i<=n;i++)
+            {
+                sum=sum+i;
+            }
+            System.out.println("sum= "+ sum);
+        }
+        catch(ArrayIndexOutOfBoundsException e)
+        {
+            System.out.println("invalid array index declared");
+        }
+        catch(Exception e)
+        {
+            System.out.println("invalid input values provided.");
+        }
+    }
+}
