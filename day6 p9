@@ -1,0 +1,27 @@
+import java.util.*;
+public class nthoddno {
+    public static void main(String[] args){
+        try{
+            int n,k;
+            Scanner sc=new Scanner(System.in);
+            System.out.println("enter n value:");
+            n=sc.nextInt();
+            if(n<0)
+            {
+                throw new ArithmeticException("invalid due to negative or zero value.");
+            }
+            k=n+n;
+            int m=2*k-1;
+            System.out.println(n+ "th odd no after " +n + " odd numbers= "+ m);
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println("invalid due to negative or zero value.");
+        }
+        catch(Exception e)
+        {
+            System.out.println("invalid input value provided.");
+        }
+
+    }
+}
